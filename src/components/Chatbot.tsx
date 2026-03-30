@@ -39,8 +39,8 @@ export default function ChatBot() {
     try {
       const apiKey = (import.meta as any).env.VITE_OPENROUTER_API_KEY;
 
-      if (!apiKey) {
-        throw new Error('OpenRouter API Key is missing. Please add it to environment variables.');
+      if (!apiKey || apiKey === 'undefined') {
+        throw new Error('API Key не найден. Пожалуйста, проверьте файл .env');
       }
 
       const response = await axios.post('https://openrouter.ai/api/v1/chat/completions', {
