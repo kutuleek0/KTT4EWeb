@@ -6,8 +6,8 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    // Set base to './' for relative paths, ensuring compatibility with GitHub Pages subfolders.
-    base: './',
+    // Set base path to the repository name for GitHub Pages compatibility.
+    base: '/KTT4EWeb/',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY || process.env.GEMINI_API_KEY),
