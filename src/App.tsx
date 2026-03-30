@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Quality from './components/Quality';
 import Calculator from './components/Calculator';
-import ChatBot from './components/ChatBot';
+import Chatbot from './components/Chatbot';
 import LanguagePrompt from './components/LanguagePrompt';
 
 export default function App() {
@@ -25,7 +25,7 @@ export default function App() {
           <Quality />
           <Calculator />
         </main>
-        <ChatBot />
+        <Chatbot />
       </div>
     </div>
   );
